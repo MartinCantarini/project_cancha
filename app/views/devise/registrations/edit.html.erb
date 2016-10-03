@@ -1,0 +1,84 @@
+<h2>Editar Perfil</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'Nueva contraseña' %> <i>(Dejar en blanco sino desea cambiarla)</i><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+    <% if @minimum_password_length %>
+      <br />
+      <em>Mínimo <%= @minimum_password_length %> caracteres</em>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'Repetir nueva contraseña' %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'Contraseña actual' %> <i>(Para efectuar los cambios es necesario que ingreses tu contraseña)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'Nombre' %><br />
+    <%= f.text_field :nombre, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Apellido' %><br />
+    <%= f.text_field :apellido, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Apodo' %><br />
+    <%= f.text_field :apodo, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Fecha de nacimiento' %><br />
+    <%= f.date_field :fecha_nacimiento, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Sexo' %><br />
+    <%= f.text_field :sexo, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Hincha de' %><br />
+    <%= f.text_field :hincha, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Localidad' %><br />
+    <%= f.text_field :localidad, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Provincia' %><br />
+    <%= f.text_field :provincia, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'País' %><br />
+    <%= f.text_field :pais, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Foto de perfil' %><br />
+    <%= f.text_field :foto, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Confirmar" %>
+  </div>
+<% end %>
+
+<h3>Cancelar mi inscripción</h3>
+
+<p>Quiere abandonar el sistema? <%= button_to "Cancelar mi cuenta", registration_path(resource_name), data: { confirm: "Esta usted seguro?" }, method: :delete %></p>
+
+<%= link_to "Volver", :back %>

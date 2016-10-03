@@ -45,3 +45,7 @@ group :development do
   gem 'spring'
 end
 
+#MANEJO DE SESIONES
+gem 'devise'
+gem "omniauth"
+gem "omniauth-facebook"
