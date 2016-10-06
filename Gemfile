@@ -47,5 +47,4 @@ end
 
 #MANEJO DE SESIONES
 gem 'devise'
-gem "omniauth"
 gem "omniauth-facebook"
