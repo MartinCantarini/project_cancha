@@ -4,7 +4,7 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -12,53 +12,54 @@
     <%= f.label 'Contraseña' %>
     <% if @minimum_password_length %>
     <em>(mínimo <%= @minimum_password_length %> caracteres)</em>
-    <% end %><br />
+    <% end %>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label 'Repetir contraseña' %><br />
+    <%= f.label 'Repetir contraseña' %>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label 'Nombre' %><br />
+    <%= f.label 'Nombre' %>
     <%= f.text_field :nombre, autocomplete: "off" %>
   </div>
   <div class="field">
-    <%= f.label 'Apellido' %><br />
+    <%= f.label 'Apellido' %>
     <%= f.text_field :apellido, autocomplete: "off" %>
   </div>
   <div class="field">
-    <%= f.label 'Apodo' %><br />
+    <%= f.label 'Apodo' %>
     <%= f.text_field :apodo, autocomplete: "off" %>
   </div>
   <div class="field">
-    <%= f.label 'Fecha de nacimiento' %><br />
+    <%= f.label 'Fecha de nacimiento' %>
     <%= f.date_field :fecha_nacimiento, autocomplete: "off" %>
   </div>
   <div class="field">
-    <%= f.label 'Sexo' %><br />
-    <%= f.text_field :sexo, autocomplete: "off" %>
+    <%= f.label 'Sexo *' %>
+    <%select_list = [ 'masculino', 'femenino' ]%>
+    <%= f.select :sexo, select_list%>
   </div>
   <div class="field">
-    <%= f.label 'Hincha de' %><br />
+    <%= f.label 'Hincha de' %>
     <%= f.text_field :hincha, autocomplete: "off" %>
   </div>
   <div class="field">
-    <%= f.label 'Localidad' %><br />
+    <%= f.label 'Localidad' %>
     <%= f.text_field :localidad, autocomplete: "off" %>
   </div>
   <div class="field">
-    <%= f.label 'Provincia' %><br />
+    <%= f.label 'Provincia' %>
     <%= f.text_field :provincia, autocomplete: "off" %>
   </div>
   <div class="field">
-    <%= f.label 'País' %><br />
+    <%= f.label 'País' %>
     <%= f.text_field :pais, autocomplete: "off" %>
   </div>
   <div class="field">
-    <%= f.label 'Foto de perfil' %><br />
+    <%= f.label 'Foto de perfil' %>
     <%= f.text_field :foto, autocomplete: "off" %>
   </div>
 

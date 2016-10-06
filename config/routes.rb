@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   get 'home/index'
   
   devise_for :users, :controllers => { registrations: 'registrations', :omniauth_callbacks => "users/omniauth_callbacks"}
-resources :users
+  resources :users
+  get 'user/update' => "users#update"
+  get 'user/edit'    => "users#edit"
+  post 'user/update' => "users#update"
+  post 'user/edit'    => "users#edit"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
