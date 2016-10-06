@@ -13,7 +13,8 @@ class User < ActiveRecord::Base
 	    user.nombre = auth.info.first_name   # assuming the user model has a name
 	    user.apellido = auth.info.last_name
 	    user.foto = auth.info.image # assuming the user model has an image
-	  end
+      user.save(validate: false)
+    end
   end
 
   def self.new_with_session(params, session)

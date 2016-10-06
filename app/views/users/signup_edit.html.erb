@@ -1,0 +1,51 @@
+<h1>Ya falta menos</h1>
+<p>Solamente necesitamos algunos datos más para que puedas disfrutar del sitio</p>
+<%= form_for @user, :url => user_signup_update_path(@user.id), :method => :POST  do |f| %> 
+ 
+  <div class="field">
+    <%= f.label 'Nombre *' %>
+    <%= f.text_field :nombre, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Apellido *' %>
+    <%= f.text_field :apellido, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Apodo *' %>
+    <%= f.text_field :apodo, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Fecha de nacimiento *' %>
+    <%= f.date_field :fecha_nacimiento, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Sexo *' %>
+    <%select_list = [ 'masculino', 'femenino' ]%>
+    <%= f.select :sexo, select_list%>
+  </div>
+  <div class="field">
+    <%= f.label 'Hincha de *' %>
+    <%= f.text_field :hincha, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Localidad *' %>
+    <%= f.text_field :localidad, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Provincia *' %>
+    <%= f.text_field :provincia, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'País *' %>
+    <%= f.text_field :pais, autocomplete: "off" %>
+  </div>
+  <div class="field">
+    <%= f.label 'Teléfono *' %>
+    <%= f.text_field :telefono, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Confirmar" %>
+  </div>
+
+<% end %>

@@ -3,10 +3,18 @@ Rails.application.routes.draw do
   
   devise_for :users, :controllers => { registrations: 'registrations', :omniauth_callbacks => "users/omniauth_callbacks"}
   resources :users
+  #--EDITAR PERFIL
   get 'user/update' => "users#update"
   get 'user/edit'    => "users#edit"
   post 'user/update' => "users#update"
   post 'user/edit'    => "users#edit"
+  #--FINALIZAR REGISTRO CON FACEBOOK
+  get 'user/signup_update' => "users#signup_update"
+  get 'user/signup_edit'    => "users#signup_edit"
+  post 'user/signup_update' => "users#signup_update"
+  post 'user/signup_edit'    => "users#signup_edit"
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
