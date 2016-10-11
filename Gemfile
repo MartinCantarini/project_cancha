@@ -48,3 +48,7 @@ end
 #MANEJO DE SESIONES
 gem 'devise'
 gem "omniauth-facebook"
+
+
+#MATERIALIZE
+gem 'materialize-sass'

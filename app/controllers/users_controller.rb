@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   
   def signup_edit
     @user=User.find(params[:format])
+    nombre=@user.nombre
   end
 
   def signup_update

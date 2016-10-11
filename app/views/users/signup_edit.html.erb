@@ -16,12 +16,15 @@
   </div>
   <div class="field">
     <%= f.label 'Fecha de nacimiento *' %>
-    <%= f.date_field :fecha_nacimiento, autocomplete: "off" %>
+    <%= f.date_field :fecha_nacimiento, class: "datepicker" %>
   </div>
   <div class="field">
-    <%= f.label 'Sexo *' %>
+    <%#= f.label 'Sexo *' %>
     <%select_list = [ 'masculino', 'femenino' ]%>
-    <%= f.select :sexo, select_list%>
+    <%#= f.select :sexo, select_list%>
+    
+    <%= f.label 'Sexo' %><br />
+    <%= f.text_field :sexo, autocomplete: "off" %>
   </div>
   <div class="field">
     <%= f.label 'Hincha de *' %>

@@ -4,6 +4,7 @@
   <title>ProjectCancha</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -23,6 +24,6 @@
 	<%= link_to "Iniciar Sesión", new_user_session_path, :class => 'navbar-link'  %>
 <%end%>
 <%= yield %>
-
+<%= javascript_include_tag 'extra_materialize'%>
 </body>
 </html>
